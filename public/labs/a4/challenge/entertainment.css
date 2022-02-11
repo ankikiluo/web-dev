@@ -1,0 +1,310 @@
+.bg-color-dark{
+    background-color: black;
+}
+
+.form-control.bark-theme-gary {
+    background-color: #313131;
+    border: none;
+}
+.font-color-blue{
+    color: #1DA1F2;
+}
+
+.dark-theme-white{
+    color: white;
+}
+
+.bg-color-yellow{
+    background-color: yellow;
+}
+
+.wd-element-margin {
+    margin: 15px 0;
+    width: 100%;
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 6px 40px;
+    margin: 1px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.explore-bar {
+    position: relative;
+}
+
+.explore-bar-pos{
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    color: gray;
+}
+.gear-set{
+    position: relative;
+    right: 10px;
+    float: right;
+    color: white;
+}
+
+.rounded-corners-all-around {
+    border-radius: 40px;
+}
+.form-control.border-round{
+    border-radius: 1.5rem;
+
+}
+
+.card-title-font {
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}
+
+.card-title-pos {
+    z-index: 1;
+    bottom: 3%;
+    left: 2%;
+}
+
+.follow-row {
+    height: 50px;
+    padding-right: 10px;
+}
+
+.follow-btn-col {
+    line-height: 45px;
+}
+/*copy from explore.css*/
+
+
+.wd-border-grey {
+    border-color: darkgray;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.wd-bg-color-grey {
+    background-color: darkgray;
+}
+
+
+.wb-search-bar{
+    border-radius: 50px;
+    width: 80%;
+    height: 30px;
+}
+
+.wd-input-text-white{
+    -webkit-text-fill-color: white;
+}
+
+
+.wd-margin-left-12px {
+    margin-left: 12px;
+}
+
+.wd-highlighted-color {
+    color: rgb(29, 161, 242);
+}
+
+.wd-font-color {
+    color: rgb(110, 118, 125);
+
+}
+
+
+.wd-grids .wd-grid-header {
+    display: flex;
+    align-items: center;
+}
+.wd-grids .wd-grid-header > div {
+    font-size: 15px;
+    font-weight: bold;
+    width: calc(100% / 6);
+    /*text-align: center;*/
+    padding: 16px;
+}
+
+.wd-pos-relative-nudge {
+    position: relative;
+    top: 15px;
+}
+
+.wd-grid-indicator {
+    position: relative;
+    width: calc(100% / 6);
+    height: 5px;
+    background-color: rgb(29, 161, 242);
+}
+
+.wd-split-line {
+    position: relative;
+    height: 3px;
+    background-color: rgb(110, 118, 125);
+}
+.wd-split-line-subline {
+    height: 10px;
+    background-color: rgb(35, 35, 35);
+}
+
+
+.wd-post-margin {
+    margin-left: 16px;
+}
+
+.wb-label {
+    color: rgb(110,118,125);
+    font-size: 13px;
+}
+
+.display-inline {
+    display: inline;
+}
+
+.wb-title {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.wb-v-align-center {
+    vertical-align: middle;
+}
+
+.pad-right-16 {
+    padding-right: 16px;
+}
+
+
+.wb-post-img {
+    /*border-radius: 10px;*/
+    /*!*height: 100%;*!*/
+    /*width: 100%;*/
+    /*vertical-align: middle;*/
+    border-radius: 15px;
+    /*height: 100%;*/
+    width: 100%;
+    vertical-align: middle;
+}
+
+wb-img-display {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.wd-posts {
+    height: 120px;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 0;
+}
+
+.post-text{
+    width: 80%;
+}
+
+.wb-avatar-img {
+    /*padding-top: 10px;*/
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+    vertical-align: middle;
+}
+
+.follow-btn {
+    vertical-align: middle;
+    width: 100%;
+}
+/*override*/
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .5rem 1rem;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    /* border: 1px solid rgba(0,0,0,.125); */
+}
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+    color: rgb(110, 118, 125);
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.list-group-item.active {
+    z-index: 2;
+    color: white;
+    background-color: #1DA1F2;
+    border-color: #1DA1F2;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1DA1F2;
+    border-color: #1DA1F2;
+}
+
+.search-bar-bg {
+    background-color: gray;
+}
+
+.nav-link .active{
+    display: block;
+    padding: .5rem 1rem;
+    /*color: darkgray;*/
+    /*text-decoration: none;*/
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.nav-tabs {
+     border-bottom: none;
+}
+
+.nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: white;
+    background-color: black;
+    /*border-color: #dee2e6 #dee2e6 #fff;*/
+    border-top: none;
+    border-right:none;
+    border-width: thick;
+    border-bottom-color: #1DA1F2;
+    border-left: none;
+}
+
+.list-group-item-follow {
+    position: relative;
+    display: block;
+    padding: .5rem 1rem;
+    color: white;
+    text-decoration: none;
+    /*background-color: #313131;*/
+
+}
+
+.follow-border {
+    border-radius: 20px;
+    background-color: #313131;
+    padding-right: 0;
+}
+
+.dark-follow{
+    color: #313131;
+    background-color: white;
+}
+
+.card-bg {
+    background-color: unset;
+}
+
+.card-border{
+    border: 1px solid gray;
+    border-radius: .25rem;
+}
