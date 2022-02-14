@@ -93,8 +93,12 @@ body {
     padding-top: 12px;
     padding-left: 12px;
     padding-right: 12px;
-    width: 488px;
 }
+
+.wd-text.wd-main-content-width {
+    width: 504px;
+}
+
 .wd-text.wd-bold {
     font-weight: bold;
 }
