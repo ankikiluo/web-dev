@@ -30,6 +30,10 @@ body {
     color: white;
 }
 
+.wd-float-right {
+    float: right;
+}
+
 .wd-handle {
     font-size: 13px;
     color: lightgray;
@@ -85,10 +89,16 @@ body {
 
 .wd-text {
     font-size: 15px;
-    width: 504px;
     flex: auto;
-    padding-bottom: 12px;
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 488px;
 }
+.wd-text.wd-bold {
+    font-weight: bold;
+}
+
 .wd-text-padding-right-16px {
     padding-right: 16px;
 }
@@ -99,7 +109,6 @@ body {
     height: 264px;
     width: 504px;
     vertical-align: middle;
-    /*padding-bottom: 12px;*/
 }
 
 .wd-border-grey-up {
@@ -116,14 +125,13 @@ body {
     border-color: rgb(47, 51, 54);
     border-width: 1px;
     border-style: solid;
+    width: 504px;
 }
 
 .wd-inselected {
     width: calc(504px / 4);
-    /*text-align: center;*/
     padding: 12px;
 }
-
 
 
 .wd-icons {
