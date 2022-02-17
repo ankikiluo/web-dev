@@ -164,7 +164,10 @@ input[type=text]{
 .wd-post-margin {
     margin-left: 16px;
 }
-
+.wb-label {
+    color: rgb(110,118,125);
+    font-size: 13px;
+}
 .wb-label {
     color: rgb(110,118,125);
     font-size: 13px;
