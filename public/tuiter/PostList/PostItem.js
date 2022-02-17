@@ -5,7 +5,7 @@ const PostItem = (post) => {
             <div class="wd-overflow-hidden">
                 <img class="wd-float-left wb-avatar" src="${post.avatarImg}">
                 <div class="wd-overflow-hidden">
-                    <span class="wd-post-padding-left-16px wd-name">${post.name}<i class="fa-solid fa-circle-check"></i></span>
+                    <span class="wd-post-padding-left-16px wd-name">${post.name} <i class="fa-solid fa-circle-check"></i></span>
                     <span class="wd-font-15px wd-font-lightgray">@${post.handle} · ${post.time}</span>
                     <span class="wd-float-right"><a class="wd-font-color" href="linktonews.html"><i class="fa-regular fa-ellipsis"></i></a></span>
                     <div class="wd-post-padding-left-12px wd-padding-bottom-12px wd-text wd-main-content-width wd-font-white">
