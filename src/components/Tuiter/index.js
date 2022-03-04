@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-const Index = () => {
+const Tuiter = () => {
     return(
         <>
             <h1>Tuiter</h1>
@@ -13,4 +13,4 @@ const Index = () => {
         </>
     )
 };
-export default Index;
+export default Tuiter;
