@@ -5,13 +5,13 @@ const TodoItem = ({
                           status: 'COMPLETED'
                       }
                     }) => {
-                        return(
-                            <li key={todo.title}>
-                                <input type="checkbox"
-                                       defaultChecked={todo.done}/>
-                                {todo.title}
-                                ({todo.status})
-                            </li>
-                        );
-                    }
+    return(
+        <li key={todo.title}>
+            <input type="checkbox"
+                   defaultChecked={todo.done}/>
+            {todo.title}
+            ({todo.status})
+        </li>
+    );
+}
 export default TodoItem;

@@ -1,5 +1,5 @@
-// import './vendors/bootstrap/css/bootstrap.min.css';
-import './vendors/bootstrap/bootstrap.min.css';
+import './vendors/bootstrap/css/bootstrap.min.css';
+// import './vendors/bootstrap/bootstrap.min.css';
 import './vendors/fontawesome/css/all.min.css';
 // import logo from './logo.svg';
 import './App.css';
@@ -7,6 +7,8 @@ import HelloWorld from "./components/HelloWorld";
 import Labs from "./components/Labs";
 import Tuiter from "./components/Tuiter";
 import {BrowserRouter, Route} from "react-router-dom";
+import HomeScreen from "./components/Tuiter/HomeScreen/HomeScreen";
+import ExploreScreen from "./components/Tuiter/ExploreScreen/ExploreScreen";
 function App() {
     return (
         <BrowserRouter>
@@ -16,6 +18,12 @@ function App() {
                 </Route>
                 <Route path={["/", "/labs"]} exact={true}>
                     <Labs/>
+                </Route>
+                <Route path="/tuiter/home" exact={true}>
+                    <HomeScreen/>
+                </Route>
+                <Route path="/tuiter/explore" exact={true}>
+                    <ExploreScreen/>
                 </Route>
                 <Route path="/tuiter" exact={true}>
                     <Tuiter/>

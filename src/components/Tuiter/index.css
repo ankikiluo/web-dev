@@ -1,0 +1,80 @@
+.wb-avatar-img {
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+    vertical-align: middle;
+}
+.follow-btn {
+    vertical-align: middle;
+    width: 100%;
+}
+.follow-btn-col {
+    line-height: 50px;
+}
+.rounded-corners-all-around {
+    border-radius: 40px;
+}
+/*.display-inline {*/
+/*    display: inline;*/
+/*}*/
+.wb-label {
+    color: rgb(110,118,125);
+    font-size: 13px;
+}
+.wb-post-img {
+    border-radius: 15px;
+    width: 100%;
+    vertical-align: middle;
+}
+.explore-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+}
+input[type=text]{
+    width: 100%;
+    padding: 6px 40px;
+    margin: 1px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.form-control{
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 1.5rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.explore-bar-pos{
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    color: gray;
+}
+.gear-pos{
+    position: relative;
+    right: 10px;
+    float: right;
+}
+.card-title-pos {
+    z-index: 1;
+    bottom: 3%;
+    left: 2%;
+}
+.card-title-font {
+    font-weight: bold;
+    font-size: 35px;
+    color: white;
+}
