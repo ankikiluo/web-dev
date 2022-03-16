@@ -3,11 +3,7 @@ import './home.css'
 import NavigationSidebar from "../NavigationSidebar/index.js";
 import PostSummaryList from "../PostSummaryList/index.js";
 import HomeComponent from "./HomeComponent.js";
-import {Link, Route} from "react-router-dom";
-import HelloWorld from "../../HelloWorld";
-import Labs from "../../Labs";
-import ExploreScreen from "../ExploreScreen/ExploreScreen";
-import Tuiter from "../index";
+import {Link} from "react-router-dom";
 
 const HomeScreen = () => {
     return(

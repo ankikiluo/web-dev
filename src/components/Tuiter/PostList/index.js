@@ -2,7 +2,7 @@ import posts from "./posts.json";
 import PostItem from "./PostItem";
 const PostList = () => {
     return(
-        <ul class="list-group">
+        <ul className="list-group">
             {posts.map(post => {
         return(<PostItem post={post}/>);
     })}
