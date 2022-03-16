@@ -1,0 +1,227 @@
+.wb-avatar-img {
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+    vertical-align: middle;
+}
+.follow-btn {
+    vertical-align: middle;
+    width: 100%;
+}
+.follow-btn-col {
+    line-height: 50px;
+}
+.rounded-corners-all-around {
+    border-radius: 40px;
+}
+/*.display-inline {*/
+/*    display: inline;*/
+/*}*/
+.wb-label {
+    color: rgb(110,118,125);
+    font-size: 13px;
+}
+.wb-post-img {
+    border-radius: 15px;
+    width: 100%;
+    vertical-align: middle;
+}
+.explore-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+}
+input[type=text]{
+    width: 100%;
+    padding: 6px 40px;
+    margin: 1px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.form-control{
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 1.5rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.explore-bar-pos{
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    color: gray;
+}
+.gear-pos{
+    position: relative;
+    right: 10px;
+    float: right;
+}
+.card-title-pos {
+    z-index: 1;
+    bottom: 3%;
+    left: 2%;
+}
+.card-title-font {
+    font-weight: bold;
+    font-size: 35px;
+    color: white;
+}
+
+.wd-border-grey {
+    border-color: rgb(47, 51, 54);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.wd-margin-left-16px {
+    margin-left: 16px;
+}
+
+.wd-padding-top-12px {
+    padding-top: 12px;
+}
+
+.wd-padding-left-16px {
+    padding-left: 16px;
+}
+
+.wd-padding-bottom-12px {
+    padding-bottom: 12px;
+}
+
+.wd-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.wd-float-right {
+    float: right;
+}
+
+.wd-handle {
+    font-size: 13px;
+    color: lightgray;
+}
+
+.wd-float-left {
+    float: left;
+}
+
+.wb-avatar {
+    /*padding-top: 10px;*/
+    border-radius: 24px;
+    height: 48px;
+    width: 48px;
+    vertical-align: middle;
+}
+
+.wd-post-padding-left-12px {
+    padding-left: 12px;
+}
+
+.wd-post-padding-left-16px {
+    padding-left: 16px;
+}
+
+.wd-post-padding-top-12px {
+    padding-top: 12px;
+}
+
+.wd-post-padding-right-12px {
+    padding-right: 12px;
+}
+
+.wd-name {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+}
+.wd-font-15px {
+    font-size: 15px;
+}
+.wd-font-lightgray {
+    color: lightgray;
+}
+
+.wd-font-white{
+    color: white;
+}
+
+.wd-font-red {
+    color: red;
+}
+
+.wd-overflow-hidden {
+    overflow: hidden;
+}
+
+.wd-text {
+    font-size: 15px;
+    flex: auto;
+    padding-top: 12px;
+    padding-left: 16px;
+    padding-right: 12px;
+}
+
+.wd-text.wd-main-content-width {
+    width: 504px;
+}
+
+.wd-text.wd-bold {
+    font-weight: bold;
+}
+
+.wd-text-padding-right-16px {
+    padding-right: 16px;
+}
+
+.wb-post-content-img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 264px;
+    width: 504px;
+    vertical-align: middle;
+}
+
+.wd-border-grey-up {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-color: rgb(47, 51, 54);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.wd-border-grey-down {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-color: rgb(47, 51, 54);
+    border-width: 1px;
+    border-style: solid;
+    width: 504px;
+}
+
+.wd-inselected {
+    width: calc(504px / 4);
+    padding: 12px;
+}
+
+
+.wd-icons {
+    display: flex;
+    align-items: center;
+}
+
+
