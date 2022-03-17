@@ -4,13 +4,14 @@ import WhoToFollowList from "./WhoToFollowList";
 import React from "react";
 import "./index.css"
 import whoReducer from "./reducers/who-reducer";
-import {createStore} from "redux";
+import tuitsReducer from "./reducers/tuits-reducer";
+import {combineReducers, createStore} from "redux";
 import {Provider} from "react-redux";
-const store = createStore(whoReducer);
 
 // import ExploreScreen from "./ExploreScreen/ExploreScreen";
 // import HomeScreen from "./HomeScreen/HomeScreen";
-
+const reducer = combineReducers({tuits: tuitsReducer, who: whoReducer});
+const store = createStore(reducer);
 const Tuiter = () => {
     return (
         <Provider store={store}>
