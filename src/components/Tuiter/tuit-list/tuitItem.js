@@ -1,4 +1,4 @@
-import './tuit.css'
+import './home.css'
 import {useDispatch} from "react-redux";
 import TuitStats from "../TuitStats";
 const TuitItem = ({

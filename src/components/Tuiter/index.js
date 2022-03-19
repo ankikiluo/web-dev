@@ -5,12 +5,13 @@ import React from "react";
 import "./index.css"
 import whoReducer from "./reducers/who-reducer";
 import tuitsReducer from "./reducers/tuits-reducer";
+import profileDataReducer from "./reducers/profileData-reducer";
 import {combineReducers, createStore} from "redux";
 import {Provider} from "react-redux";
 
 // import ExploreScreen from "./ExploreScreen/ExploreScreen";
 // import HomeScreen from "./HomeScreen/HomeScreen";
-const reducer = combineReducers({tuits: tuitsReducer, who: whoReducer});
+const reducer = combineReducers({tuits: tuitsReducer, who: whoReducer, profileData: profileDataReducer});
 const store = createStore(reducer);
 const Tuiter = () => {
     return (

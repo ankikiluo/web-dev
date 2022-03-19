@@ -1,0 +1,33 @@
+.wb-avatar-img {
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+    vertical-align: middle;
+}
+.follow-btn {
+    vertical-align: middle;
+    width: 100%;
+}
+.follow-btn-col {
+    line-height: 50px;
+}
+.rounded-corners-all-around {
+    border-radius: 40px;
+}
+
+input[type=textplain] {
+    width: 100%;
+    margin: 1px 0;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.form-control-plaintext {
+    display: block;
+    width: 100%;
+    padding: .375rem 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: #fbfbfb;
+    background-color: transparent;
+    border: 0 solid transparent;
+}

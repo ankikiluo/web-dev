@@ -2,8 +2,7 @@
 import TuitListItem from "./tuitItem";
 import {useSelector} from "react-redux";
 const TuitList = () => {
-    const tuits = useSelector(
-        state => state.tuits);
+    const tuits = useSelector(state => state.tuits);
     return (
         <ul className="list-group">
             {tuits.map && tuits.map(tuit => {
