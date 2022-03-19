@@ -8,18 +8,6 @@ import {Link} from "react-router-dom";
 const ExploreScreen = () => {
     return(
         <>
-            <Link to="/hello">
-                Hello
-            </Link> |
-            <Link to="/labs">
-                Labs
-            </Link> |
-            {/*<Link to="/tuiter">*/}
-            {/*    Tuiter*/}
-            {/*</Link> |*/}
-            <Link to="/tuiter/home">
-                Tuiter Home
-            </Link>
             <div className="row mt-2">
                 <div
                      style={{"position": "relative"}}>

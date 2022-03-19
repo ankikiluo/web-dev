@@ -6,16 +6,32 @@ import './App.css';
 import HelloWorld from "./components/HelloWorld";
 import Labs from "./components/Labs";
 import Tuiter from "./components/Tuiter";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
 // import HomeScreen from "./components/Tuiter/HomeScreen/HomeScreen";
 import HomeScreen from "./components/Tuiter/home-screen";
 import ExploreScreen from "./components/Tuiter/ExploreScreen/ExploreScreen";
 import ProfileScreen from "./components/Tuiter/ProfileScreen";
 import EditProfile from "./components/Tuiter/EditProfile";
+import React from "react";
 function App() {
     return (
         <BrowserRouter>
             <div className="container">
+                <Link to="/labs">
+                    Labs
+                </Link> |
+                <Link to="/hello">
+                    Hello world
+                </Link> |
+                <Link to="/tuiter/home">
+                    Tuiter Home
+                </Link> |
+                <Link to="/tuiter/explore">
+                    Tuiter Explore
+                </Link> |
+                <Link to="/tuiter/profile">
+                    Tuiter Profile
+                </Link>
                 <Routes>
                     <Route path="/">
                         <Route path="labs"
