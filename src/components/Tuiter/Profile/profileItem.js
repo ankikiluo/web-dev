@@ -65,6 +65,9 @@ const ProfileItem = ({
                         <span> Joined {profile.dateJoined}</span>
                     </div>
                 </div>
+                <div>
+                    <span>{profile.website}</span>
+                </div>
                 <div className="wd-icons wd-post-padding-top-12px">
                     <div className="icon-padding-right-5px">
                         <span className="bold-num"> {profile.followingCount}</span>

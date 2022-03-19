@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
 import {Link} from "react-router-dom";
-import React from "react";
+import React, {useState} from "react";
 import "./edit.css"
 const EditProfile = ({
                          // profile= {
@@ -13,22 +13,68 @@ const EditProfile = ({
                          // }
                      }) => {
     const profile = useSelector(state => state.profileData);
+    const [editedProfile, setProfile] = useState({});
     const dispatch = useDispatch();
-    const deleteProfile = (Profile) => {
-        dispatch({
-                     type: 'delete-profile',
-                     Profile})
-    };
+    const editProfileClickHandler = (profile) => {
+        const action = {
+            type: 'edit-profile',
+            profile
+        };
+        dispatch(action);
+        // sent action to reducer
+    }
+    const nameChangeHandler = (event) => {
+        const nameValue = event.target.value;
+        const newName = {
+            name: nameValue
+        };
+        setProfile(newName);
+    }
+    const bioChangeHandler = (event) => {
+        const bioValue = event.target.value;
+        const newBio = {
+            bio: bioValue
+        };
+        setProfile(newBio);
+    }
+    const locationChangeHandler = (event) => {
+        const locationValue = event.target.value;
+        const newLocation = {
+            location: locationValue
+        };
+        setProfile(newLocation);
+    }
+    const websiteChangeHandler = (event) => {
+        const websiteValue = event.target.value;
+        const newWebsite = {
+            website: websiteValue
+        };
+        setProfile(newWebsite);
+    }
+    const dateOfBirthChangeHandler = (event) => {
+        const birthValue = event.target.value;
+        const newBirth = {
+            dateOfBirth: birthValue
+        };
+        setProfile(newBirth);
+    }
     return(
         <div className="container">
             <div className="row">
-                <div className="col-1 flex"><i className="fa fa-xmark"/></div>
+                <div className="col-1 flex"><Link to="/tuiter/profile"><i className="fa fa-xmark"/></Link></div>
                 <div className="col-8">
                     <div className="header text-white">Edit profile</div>
                 </div>
                 <div className="col-3 ">
-                    <Link to="/tuiter/editProfile">
-                        <button className="btn edit-btn edit-btn-pos edit-btn-rounded-corners-all-around">
+                    <Link to="/tuiter/profile">
+                        <button onClick={()=>
+                            editProfileClickHandler({...profile,
+                                                        name:editedProfile.name,
+                                                        bio:editedProfile.bio,
+                                                        location:editedProfile.location,
+                                                        website:editedProfile.website,
+                                                        dateOfBirth:editedProfile.dateOfBirth})}
+                                className="btn edit-btn edit-btn-pos edit-btn-rounded-corners-all-around">
                         SAVE</button></Link>
                 </div>
             </div>
@@ -50,34 +96,24 @@ const EditProfile = ({
             <form>
                 <div className="form-group edit-input-border edit-input-rounded-corners-all-around mb-3">
                     <label htmlFor="name">Name</label>
-                    <input type="textplain" className="form-control-plaintext" placeholder={profile.name} value={profile.name}/>
+                    <input type="textplain" className="form-control-plaintext" placeholder={profile.name} value={editedProfile.name} onChange={nameChangeHandler}/>
                 </div>
                 <div className="form-group edit-input-border edit-input-rounded-corners-all-around mb-3">
                     <label htmlFor="bio">Bio</label>
-                    <input type="textplain" className="form-control-plaintext" placeholder={profile.bio} value={profile.bio}/>
+                    <input type="textplain" className="form-control-plaintext" placeholder={profile.bio} value={editedProfile.bio} onChange={bioChangeHandler}/>
                 </div>
                 <div className="form-group edit-input-border edit-input-rounded-corners-all-around mb-3">
                     <label htmlFor="location">Location</label>
-                    <input type="textplain" className="form-control-plaintext" placeholder={profile.location} value={profile.location}/>
+                    <input type="textplain" className="form-control-plaintext" placeholder={profile.location} value={editedProfile.location} onChange={locationChangeHandler}/>
                 </div>
                 <div className="form-group edit-input-border edit-input-rounded-corners-all-around mb-3">
                     <label htmlFor="website">Website</label>
-                    <input type="textplain" className="form-control-plaintext" placeholder={profile.website} value={profile.website}/>
+                    <input type="textplain" className="form-control-plaintext" placeholder={profile.website} value={editedProfile.website} onChange={websiteChangeHandler}/>
                 </div>
                 <div className="form-group edit-input-border edit-input-rounded-corners-all-around mb-3">
                     <label htmlFor="dateOfBirth">Date of birth</label>
-                    <input type="textplain" className="form-control-plaintext" placeholder={profile.dateOfBirth} value={profile.dateOfBirth}/>
+                    <input type="textplain" className="form-control-plaintext" placeholder={profile.dateOfBirth} value={editedProfile.dateOfBirth} onChange={dateOfBirthChangeHandler}/>
                 </div>
-                {/*<div className="form-group">*/}
-                {/*    <label htmlFor="exampleInputPassword1">Password</label>*/}
-                {/*    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>*/}
-                {/*</div>*/}
-                {/*<div className="form-check">*/}
-                {/*    <input type="checkbox" className="form-check-input" id="exampleCheck1">*/}
-                {/*        <label className="form-check-label" htmlFor="exampleCheck1">Check me*/}
-                {/*            out</label></input>*/}
-                {/*</div>*/}
-                <button type="submit" className="btn btn-primary">Submit</button>
             </form>
 
         </div>
