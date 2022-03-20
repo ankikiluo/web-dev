@@ -45,14 +45,27 @@ const TuitItem = ({
                             deleteTuit(tuit)}
                            className="wd-post-padding-right-12px fa-solid fa-xmark"/></a>
                     </span>
-                    {/*<div className="wd-post-padding-left-12px">*/}
-                    {/*    {tuit.attachments.image} === {""} ? "" : <img className="wd-border-grey-up wb-post-content-img" src={tuit.attachments.image}/>*/}
-                    {/*</div>*/}
                     <div className=" wd-post-padding-left-12px">
                         <div >
                             <div className="wd-text wd-bold wd-font-white ">{tuit.title}</div>
                             <div className="wd-text wd-font-lightgray">{tuit.tuit}</div>
-                            <div className="wd-text wd-padding-bottom-12px wd-font-lightgray">{tuit.link}</div>
+                            {/*<div className="wd-text wd-padding-bottom-12px wd-font-lightgray">111</div>*/}
+                            {
+                                tuit.attachments && tuit.attachments.image &&
+                                <img src={tuit.attachments.image}
+                                     className="wd-text"
+                                     style={{width: "100%"}}/>
+                            }
+                            {
+                                tuit.attachments && tuit.attachments.video &&
+                                <iframe width="100%" height="350px"
+                                        className="wd-text"
+                                        style={{width: "100%"}}
+                                        src={`https://www.youtube.com/embed/${tuit.attachments.video}`}
+                                        title="YouTube video player" frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen/>
+                            }
                         </div>
 
                         <TuitStats tuit={tuit}/>

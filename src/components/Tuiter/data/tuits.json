@@ -12,7 +12,7 @@
         "title": "React.js is a component based front end library that makes it very easy to build Single Page Applications or SPAs",
         "tuit": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         "attachments": {
-            "image": "../img/starship.jpg"
+            "video": "unKvMC3Y1kI"
         },
         "logo_image": "../img/react.jpg",
         "avatar_image": "../img/react.jpg",
@@ -34,7 +34,7 @@
         "title": "",
         "tuit": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         "attachments": {
-            "image": "../img/starship.jpg"
+            "image": "../img/spacex-starship.jpg"
         },
         "time": "last month",
         "logo_image": "../img/spacex.jpg",
@@ -59,9 +59,6 @@
         "time": "1 day",
         "title": "JavaScript is programming language that can run on browsers as well as desktops",
         "tuit": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-        "attachments": {
-            "image": "../img/starship.jpg"
-        },
         "logo_image": "../img/ScottManley.jpg",
         "avatar_image": "../img/ScottManley.jpg",
         "tuits": "123K",
@@ -83,9 +80,6 @@
         "title": "jQuery",
         "tuit": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         "time": "last week",
-        "attachments": {
-            "image": "../img/starship.jpg"
-        },
         "logo_image": "../img/jquery_logo.jpg",
         "avatar_image": "../img/jquery_logo.jpg",
         "tuits": "122K",
@@ -107,9 +101,6 @@
         "title": "",
         "tuit": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         "time": "last month",
-        "attachments": {
-            "image": ""
-        },
         "logo_image": "../img/nodejs.jpg",
         "avatar_image": "../img/nodejs.jpg",
         "tuits": "120K",
