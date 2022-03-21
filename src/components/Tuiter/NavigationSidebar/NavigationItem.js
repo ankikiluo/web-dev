@@ -10,7 +10,7 @@ const NavigationItem = ({
      <Link to={link.link} className={`list-group-item list-group-item-action ${link.linkName=== active ? 'active':''}`}>
          <div className="row">
             <div className="col-2"><i className={`${link.fontAwesome}`}/></div>
-            <div className="col-10 d-lg-none d-xl-block"><span>{link.linkName}</span></div>
+            <div className="col-10 d-none d-xl-inline"><span>{link.linkName}</span></div>
         </div>
     </Link>
     );

@@ -24,6 +24,11 @@ const ExploreComponent = ({active}) => {
                 {tags.map(tag => {
                     return(<NavTag tag={tag} active={active}/>)
                 })}
+                <li className="nav-item d-sm-none d-md-inline">
+                    <a className="nav-link" href="#">
+                        Entertainment
+                    </a>
+                </li>
             </ul>
 
             <div className="position-relative mb-2">
