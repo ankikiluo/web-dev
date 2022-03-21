@@ -23,7 +23,6 @@ const ProfileItem = ({
 
 
             <div className="position-relative">
-                {/*<img src="../img/spacex-starship.jpg" className="card-img-top" alt="..."/>*/}
                 <div className="banner-img">
                     <img alt="" src={profile.bannerPicture} className="banner"/>
                     {/*<img alt="" src="https://pbs.twimg.com/profile_banners/58987862/1599244765/600x200" className="banner"/>*/}
