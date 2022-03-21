@@ -2,62 +2,54 @@ import {useDispatch, useSelector} from "react-redux";
 import {Link} from "react-router-dom";
 import React, {useState} from "react";
 import "./edit.css"
-const EditProfile = ({
-                         // profile= {
-                         //     "name": "Jose Annunziato", "handle": "jannunzi",
-                         //     "profilePicture": "jose.png", "bannerPicture": "polyglot.png",
-                         //     "bio": "Faculty, Software Engineer, AI, Space, and renewable enthusiast. Retuits and likes are not endorsements.",
-                         //     "website": "youtube.com/webdevtv",
-                         //     "location": "Boston, MA", "dateOfBirth": "7/7/1968", "dateJoined": "4/2009",
-                         //     "followingCount": 312, "followersCount": 180
-                         // }
-                     }) => {
+const EditProfile = () => {
     const profile = useSelector(state => state.profileData);
-    const [editedProfile, setProfile] = useState({});
+    const [val, setVal] = useState({});
+
     const dispatch = useDispatch();
     const editProfileClickHandler = (profile) => {
         const action = {
             type: 'edit-profile',
-            profile
+            profile: profile
         };
         dispatch(action);
         // sent action to reducer
     }
-    const nameChangeHandler = (event) => {
-        const nameValue = event.target.value;
-        const newName = {
-            name: nameValue
-        };
-        setProfile(newName);
-    }
-    const bioChangeHandler = (event) => {
-        const bioValue = event.target.value;
-        const newBio = {
-            bio: bioValue
-        };
-        setProfile(newBio);
-    }
-    const locationChangeHandler = (event) => {
-        const locationValue = event.target.value;
-        const newLocation = {
-            location: locationValue
-        };
-        setProfile(newLocation);
-    }
-    const websiteChangeHandler = (event) => {
-        const websiteValue = event.target.value;
-        const newWebsite = {
-            website: websiteValue
-        };
-        setProfile(newWebsite);
-    }
-    const dateOfBirthChangeHandler = (event) => {
-        const birthValue = event.target.value;
-        const newBirth = {
-            dateOfBirth: birthValue
-        };
-        setProfile(newBirth);
-    }
+    // const nameChangeHandler = (event) => {
+    //     const nameValue = event.target.value;
+    //     const newName = {
+    //         name: nameValue
+    //     };
+    //     setProfile(newName);
+    // }
+    // const bioChangeHandler = (event) => {
+    //     const bioValue = event.target.value;
+    //     const newBio = {
+    //         bio: bioValue
+    //     };
+    //     setProfile(newBio);
+    // }
+    // const locationChangeHandler = (event) => {
+    //     const locationValue = event.target.value;
+    //     const newLocation = {
+    //         location: locationValue
+    //     };
+    //     setProfile(newLocation);
+    // }
+    // const websiteChangeHandler = (event) => {
+    //     const websiteValue = event.target.value;
+    //     const newWebsite = {
+    //         website: websiteValue
+    //     };
+    //     setProfile(newWebsite);
+    // }
+    // const dateOfBirthChangeHandler = (event) => {
+    //     const birthValue = event.target.value;
+    //     const newBirth = {
+    //         dateOfBirth: birthValue
+    //     };
+    //     setProfile(newBirth);
+    // }
     return(
         <div className="container">
             <div className="row">
@@ -69,11 +61,11 @@ const EditProfile = ({
                     <Link to="/tuiter/profile">
                         <button onClick={()=>
                             editProfileClickHandler({...profile,
-                                                        name:editedProfile.name,
-                                                        bio:editedProfile.bio,
-                                                        location:editedProfile.location,
-                                                        website:editedProfile.website,
-                                                        dateOfBirth:editedProfile.dateOfBirth})}
+                                                        name:val.name,
+                                                        bio:val.bio,
+                                                        location:val.location,
+                                                        website:val.website,
+                                                        dateOfBirth:val.dateOfBirth})}
                                 className="btn edit-btn edit-btn-pos edit-btn-rounded-corners-all-around">
                         SAVE</button></Link>
                 </div>
@@ -96,23 +88,23 @@ const EditProfile = ({
             <form>
                 <div className="form-group edit-input-border edit-input-rounded-corners-all-around mb-3">
                     <label htmlFor="name">Name</label>
-                    <input type="textplain" className="form-control-plaintext" placeholder={profile.name} value={editedProfile.name} onChange={nameChangeHandler}/>
+                    <input type="textplain" className="form-control-plaintext" placeholder={profile.name} value={val.name} onChange={(event) => setVal({ ...val, name: event.target.value })}/>
                 </div>
                 <div className="form-group edit-input-border edit-input-rounded-corners-all-around mb-3">
                     <label htmlFor="bio">Bio</label>
-                    <input type="textplain" className="form-control-plaintext" placeholder={profile.bio} value={editedProfile.bio} onChange={bioChangeHandler}/>
+                    <input type="textplain" className="form-control-plaintext" placeholder={profile.bio} value={val.bio} onChange={(event) => setVal({ ...val, bio: event.target.value})}/>
                 </div>
                 <div className="form-group edit-input-border edit-input-rounded-corners-all-around mb-3">
                     <label htmlFor="location">Location</label>
-                    <input type="textplain" className="form-control-plaintext" placeholder={profile.location} value={editedProfile.location} onChange={locationChangeHandler}/>
+                    <input type="textplain" className="form-control-plaintext" placeholder={profile.location} value={val.location} onChange={(event) => setVal({ ...val, location: event.target.value})}/>
                 </div>
                 <div className="form-group edit-input-border edit-input-rounded-corners-all-around mb-3">
                     <label htmlFor="website">Website</label>
-                    <input type="textplain" className="form-control-plaintext" placeholder={profile.website} value={editedProfile.website} onChange={websiteChangeHandler}/>
+                    <input type="textplain" className="form-control-plaintext" placeholder={profile.website} value={val.website} onChange={(event) => setVal({ ...val, website: event.target.value})}/>
                 </div>
                 <div className="form-group edit-input-border edit-input-rounded-corners-all-around mb-3">
                     <label htmlFor="dateOfBirth">Date of birth</label>
-                    <input type="textplain" className="form-control-plaintext" placeholder={profile.dateOfBirth} value={editedProfile.dateOfBirth} onChange={dateOfBirthChangeHandler}/>
+                    <input type="textplain" className="form-control-plaintext" placeholder={profile.dateOfBirth} value={val.dateOfBirth} onChange={(event) => setVal({ ...val, dateOfBirth: event.target.value})}/>
                 </div>
             </form>
 
