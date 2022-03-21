@@ -15,41 +15,6 @@ const EditProfile = () => {
         dispatch(action);
         // sent action to reducer
     }
-    // const nameChangeHandler = (event) => {
-    //     const nameValue = event.target.value;
-    //     const newName = {
-    //         name: nameValue
-    //     };
-    //     setProfile(newName);
-    // }
-    // const bioChangeHandler = (event) => {
-    //     const bioValue = event.target.value;
-    //     const newBio = {
-    //         bio: bioValue
-    //     };
-    //     setProfile(newBio);
-    // }
-    // const locationChangeHandler = (event) => {
-    //     const locationValue = event.target.value;
-    //     const newLocation = {
-    //         location: locationValue
-    //     };
-    //     setProfile(newLocation);
-    // }
-    // const websiteChangeHandler = (event) => {
-    //     const websiteValue = event.target.value;
-    //     const newWebsite = {
-    //         website: websiteValue
-    //     };
-    //     setProfile(newWebsite);
-    // }
-    // const dateOfBirthChangeHandler = (event) => {
-    //     const birthValue = event.target.value;
-    //     const newBirth = {
-    //         dateOfBirth: birthValue
-    //     };
-    //     setProfile(newBirth);
-    // }
     return(
         <div className="container">
             <div className="row">
@@ -75,12 +40,10 @@ const EditProfile = () => {
             <div className="position-relative">
                 {/*<img src="../img/spacex-starship.jpg" className="card-img-top" alt="..."/>*/}
                 <div className="banner-img">
-                    {/*<img alt="" src={profile.bannerPicture} className="banner"/>*/}
-                    <img alt="" src="https://pbs.twimg.com/profile_banners/58987862/1599244765/600x200" className="banner"/>
+                    <img alt="" src={profile.bannerPicture} className="banner"/>
                 </div>
                 <div className="position-absolute avatar-img-pos m-2">
-                    {/*<img className="float-right profile-avatar avatar-border" src={profile.profilePicture}/>*/}
-                    <img className="float-right profile-avatar avatar-border" src="https://pbs.twimg.com/profile_banners/58987862/1599244765/600x200"/>
+                    <img className="float-right profile-avatar avatar-border" src={profile.profilePicture}/>
                 </div>
             </div>
             <br/>
