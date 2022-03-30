@@ -1,6 +1,7 @@
 import './home.css'
 import {useDispatch} from "react-redux";
 import TuitStats from "../TuitStats";
+import {deleteTuit} from "../../actions/tuits-actions";
 const TuitItem = ({
                     tuit= {
                         "_id": "123",
@@ -26,12 +27,8 @@ const TuitItem = ({
                         }
                     }
                   }) => {
+    console.log(tuit)
     const dispatch = useDispatch();
-    const deleteTuit = (tuit) => {
-        dispatch({
-                     type: 'delete-tuit',
-                     tuit})
-    };
     return(
         <div className="wd-border-grey">
         <div className="wd-padding-left-16px wd-padding-top-12px wd-padding-bottom-12px">
@@ -41,15 +38,13 @@ const TuitItem = ({
                     <span className="wd-post-padding-left-16px wd-name">{tuit.postedBy.username} <i className="fa-solid fa-circle-check"/></span>
                     <span className="wd-font-15px wd-font-lightgray">@{tuit.handle} · {tuit.time}</span>
                     <span className="wd-float-right"><a className="wd-font-lightgray">
-                        <i onClick={() =>
-                            deleteTuit(tuit)}
+                        <i onClick={() => deleteTuit(dispatch, tuit)}
                            className="wd-post-padding-right-12px fa-solid fa-xmark"/></a>
                     </span>
                     <div className=" wd-post-padding-left-12px">
                         <div >
                             <div className="wd-text wd-bold wd-font-white ">{tuit.title}</div>
                             <div className="wd-text wd-font-lightgray">{tuit.tuit}</div>
-                            {/*<div className="wd-text wd-padding-bottom-12px wd-font-lightgray">111</div>*/}
                             {
                                 tuit.attachments && tuit.attachments.image &&
                                 <img src={tuit.attachments.image}

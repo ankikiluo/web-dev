@@ -1,48 +1,59 @@
-import tuits from "../data/tuits.json";
-const tuitsReducer =
-    (state = tuits, action) => {
-        switch (action.type) {
-            case 'like-tuit':
-                return state.map(tuit => {
-                    if (tuit._id === action.tuit._id) {
-                        if (tuit.liked === true) {
-                            tuit.liked = false;
-                            tuit.stats.likes--;
-                        } else {
-                            tuit.liked = true;
-                            tuit.stats.likes++;
-                        }
-                        return tuit;
+import {UPDATE_TUIT_THUMB_UP, UPDATE_TUIT_THUMB_DOWN, UPDATE_TUIT_LIKE, CREATE_TUIT, DELETE_TUIT, FIND_ALL_TUITS} from "../../actions/tuits-actions";
+const tuitsReducer = (state = [], action) => {
+    switch (action.type) {
+        case UPDATE_TUIT_THUMB_DOWN:
+            return state.map(
+                tuit => tuit._id === action.tuit._id ?
+                        action.tuit : tuit);
+        case UPDATE_TUIT_THUMB_UP:
+            return state.map(
+                tuit => tuit._id === action.tuit._id ?
+                        action.tuit : tuit);
+        case UPDATE_TUIT_LIKE:
+            return state.map(tuit => {
+                if(tuit._id === action.tuit._id) {
+                    if(tuit.liked === true) {
+                        tuit.liked = false;
+                        tuit.stats.likes--;
                     } else {
-                        return tuit;
+                        tuit.liked = true;
+                        tuit.stats.likes++;
                     }
-                });
-            case 'delete-tuit':
-                return state.filter(tuit => tuit._id !== action.tuit._id);
-            case 'create-tuit':
-                const newTuit = {
-                    tuit: action.tuit,
-                    _id: (new Date()).getTime() + '',
-                    postedBy: {
-                        "username": "ReactJS"
-                    },
-                    handle: "ReactJS",
-                    time: "now",
-                    logo_image: "../img/react.jpg",
-                    avatar_image: "../img/react.jpg",
-                    stats: {
-                        comments: 333,
-                        retuits: 111,
-                        likes: 222,
-                    }
+                    return tuit;
+                } else {
+                    return tuit;
                 }
-                return [
-                    newTuit,
-                    ...state,
-                ];
-            default:
-                return tuits
-        }
+            });
+        case CREATE_TUIT:
+            const formattedNewTuit = {
+                ...action.newTuit,
+                "topic": "New Tuit from Server",
+                "postedBy": {
+                    "username": "Server's voice"
+                },
+                "handle": "ReactJS",
+                "time": "2h",
+                "title": "The New Tuit From server",
+                "logo_image": "../img/react.jpg",
+                "avatar_image": "../img/react.jpg",
+                "stats": {
+                    "comments": 0,
+                    "retuits": 0,
+                    "likes": 0},
+                "thumbUp": 0,
+                "thumbDown": 0
+            };
+            return [
+                ...state,
+                formattedNewTuit
+            ];
+        case FIND_ALL_TUITS:
+            return action.tuits;
+        case DELETE_TUIT:
+            return state.filter(tuit => tuit._id !== action.tuit._id);
+        default:
+            return state;
     }
+}
 
 export default tuitsReducer;
