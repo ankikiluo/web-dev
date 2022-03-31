@@ -1,5 +1,5 @@
 import {useDispatch} from "react-redux";
-import {updateTuitLike, updateTuitThumbUp, updateTuitThumbDown} from "../../actions/tuits-actions";
+import {updateTuitLike, updateTuitThumb} from "../../actions/tuits-actions";
 const TuitStats = ({tuit}) => {
     const dispatch = useDispatch();
     return (
@@ -26,13 +26,13 @@ const TuitStats = ({tuit}) => {
 
             <div className="wd-inselected wd-font-lightgray">
                 <span className="wd-post-padding-right-12px">
-                    <i onClick={() => updateTuitThumbUp(dispatch, {...tuit, thumbUp: tuit.thumbUp + 1})}
+                    <i onClick={() => updateTuitThumb(dispatch, {...tuit, thumbUp: tuit.thumbUp + 1})}
                          className="fa-solid fa-thumbs-up ms-2"/></span>
                 <span>{tuit.thumbUp}</span>
             </div>
             <div className="wd-inselected wd-font-lightgray">
                 <span className="wd-post-padding-right-12px">
-                <i onClick={() => updateTuitThumbUp(dispatch, {...tuit, thumbDown: tuit.thumbDown + 1})}
+                <i onClick={() => updateTuitThumb(dispatch, {...tuit, thumbDown: tuit.thumbDown + 1})}
                    className="fa-solid fa-thumbs-down ms-2"/></span>
                 <span>{tuit.thumbDown}</span>
             </div>

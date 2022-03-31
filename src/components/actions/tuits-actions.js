@@ -1,6 +1,5 @@
 import * as service from '../services/tuits-service';
-export const UPDATE_TUIT_THUMB_UP = 'UPDATE_TUIT_THUMB_UP';
-export const UPDATE_TUIT_THUMB_DOWN = 'UPDATE_TUIT_THUMB_DOWN';
+export const UPDATE_TUIT_THUMB = 'UPDATE_TUIT_THUMB';
 export const CREATE_TUIT = 'CREATE_TUIT';
 export const FIND_ALL_TUITS = 'FIND_ALL_TUITS';
 export const UPDATE_TUIT_LIKE = 'UPDATE_TUIT_LIKE';
@@ -27,17 +26,10 @@ export const updateTuitLike = async (dispatch, tuit) => {
                  tuit
              });
 }
-export const updateTuitThumbUp = async (dispatch, tuit) => {
+export const updateTuitThumb = async (dispatch, tuit) => {
     const response = await service.updateTuit(tuit);
     dispatch({
-                 type: UPDATE_TUIT_THUMB_UP,
-                 tuit
-             });
-}
-export const updateTuitThumbDown = async (dispatch, tuit) => {
-    const response = await service.updateTuit(tuit);
-    dispatch({
-                 type: UPDATE_TUIT_THUMB_DOWN,
+                 type: UPDATE_TUIT_THUMB,
                  tuit
              });
 }

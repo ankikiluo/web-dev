@@ -1,11 +1,7 @@
-import {UPDATE_TUIT_THUMB_UP, UPDATE_TUIT_THUMB_DOWN, UPDATE_TUIT_LIKE, CREATE_TUIT, DELETE_TUIT, FIND_ALL_TUITS} from "../../actions/tuits-actions";
+import {UPDATE_TUIT_THUMB, UPDATE_TUIT_LIKE, CREATE_TUIT, DELETE_TUIT, FIND_ALL_TUITS} from "../../actions/tuits-actions";
 const tuitsReducer = (state = [], action) => {
     switch (action.type) {
-        case UPDATE_TUIT_THUMB_DOWN:
-            return state.map(
-                tuit => tuit._id === action.tuit._id ?
-                        action.tuit : tuit);
-        case UPDATE_TUIT_THUMB_UP:
+        case UPDATE_TUIT_THUMB:
             return state.map(
                 tuit => tuit._id === action.tuit._id ?
                         action.tuit : tuit);
