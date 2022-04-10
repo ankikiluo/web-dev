@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from "react";
 import service from './service';
 const Movies = () => {
-    useEffect(() =>
-                  service.findAllMovies()
-                      .then(movies => setMovies(movies)));
+    useEffect(() => service.findAllMovies().then(movies => setMovies(movies)));
 
     const deleteMovie = (movie) =>
         service.deleteMovie(movie._id)
