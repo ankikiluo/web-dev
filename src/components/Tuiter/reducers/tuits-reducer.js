@@ -21,27 +21,27 @@ const tuitsReducer = (state = [], action) => {
                 }
             });
         case CREATE_TUIT:
-            const formattedNewTuit = {
-                ...action.newTuit,
-                "topic": "New Tuit from Server",
-                "postedBy": {
-                    "username": "Server's voice"
-                },
-                "handle": "ReactJS",
-                "time": "2h",
-                "title": "The New Tuit From server",
-                "logo_image": "../img/react.jpg",
-                "avatar_image": "../img/react.jpg",
-                "stats": {
-                    "comments": 0,
-                    "retuits": 0,
-                    "likes": 0},
-                "thumbUp": 0,
-                "thumbDown": 0
-            };
+            // const formattedNewTuit = {
+            //     ...action.newTuit,
+            //     "topic": "New Tuit from Server",
+            //     "postedBy": {
+            //         "username": "Server's voice"
+            //     },
+            //     "handle": "ReactJS",
+            //     "time": "2h",
+            //     "title": "The New Tuit From server",
+            //     "logo_image": "../img/react.jpg",
+            //     "avatar_image": "../img/react.jpg",
+            //     "stats": {
+            //         "comments": 0,
+            //         "retuits": 0,
+            //         "likes": 0},
+            //     "thumbUp": 0,
+            //     "thumbDown": 0
+            // };
             return [
                 ...state,
-                formattedNewTuit
+                action.newTuit
             ];
         case FIND_ALL_TUITS:
             return action.tuits;
